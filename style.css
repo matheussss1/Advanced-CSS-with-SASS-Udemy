@@ -129,7 +129,7 @@ body {
 }
 
 .btn:active {
-    transform: translateY(1px)
+    transform: translateY(3px)
 }
 
 .btn::after {
@@ -142,7 +142,7 @@ body {
     top: 0;
     left: 0;
     z-index: -1;
-    transition: all .4s;
+    transition: all .5s;
 }
 
 .btn:hover::after {
@@ -153,7 +153,7 @@ body {
 @keyframes moveInBottom {
     0% {
         opacity: 0;
-        transform: translateY(100px)
+        transform: translateY(150px)
     }
     100% {
         opacity: 1;

@@ -1,7 +1,7 @@
 .card {
 
     //FUNCTIONALITY FUNCIONALIDADE
- perspective: 150rem;
+ perspective: 120000rem;
  -moz-perspective: 150rem;
  position: relative;
  height: 50rem;
@@ -15,7 +15,7 @@
     width: 100%;
     backface-visibility: hidden;
     border-radius: 1rem;
-    box-shadow: 0 1rem 1rem rgba($color: #000000, $alpha: 0.2);
+    box-shadow: 0 1rem 1rem rgba($color: $color-black, $alpha: 0.2);
     font-size: 12px;
 
     &--front {
@@ -54,24 +54,61 @@
     }
 
     //fRONT-SZIE STYLING
-    .card__picture {
+    &__picture {
         background-size: cover;
-        clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 90% , 0 100%);
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 70% 90% , 20% 100%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 80%, 70% 90% , 20% 100%, 0 100%);
+        height: 20rem;
+        background-blend-mode: screen;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
 
         &--1{
-            background-image: url( ../img/nat-5.jpg);
-            height: 20rem;
             
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-secondary-ligth, 1),
+                rgba($color-secondary-dark, 1)) ,url( ../img/nat-5.jpg);
+        
         }
         
         &--2{
-            background-image: url( ../img/nat-5.jpg);
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-primary-ligth, 1),
+                rgba($color-primary-dark, 1)) ,url( ../img/nat-6.jpg);
             
         }
         
         &--3{
-            background-image: url( ../img/nat-5.jpg);
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-tertiary-ligth, 1),
+                rgba($color-tertiary-dark, 1)) ,url( ../img/nat-7.jpg);
+        }
 
+    }
+    &__heading{
+        font-size: 2.8rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        width: 68%;
+        text-align: right;
+
+        color: $color-white;
+    }
+    &__heading-span {
+        padding: 1rem 1.5rem;
+        -webkit-box-decoration-break: clone;
+
+        &--1 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-secondary-ligth, 1),
+                rgba($color-secondary-dark, 1)) ,url( ../img/nat-5.jpg);
         }
     }
 }

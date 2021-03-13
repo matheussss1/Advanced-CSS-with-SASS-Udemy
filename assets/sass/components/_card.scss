@@ -1,0 +1,77 @@
+.card {
+
+    //FUNCTIONALITY FUNCIONALIDADE
+ perspective: 150rem;
+ -moz-perspective: 150rem;
+ position: relative;
+ height: 50rem;
+
+ &__side{
+    height: 50rem;
+    transition: all 1.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+    box-shadow: 0 1rem 1rem rgba($color: #000000, $alpha: 0.2);
+    font-size: 12px;
+
+    &--front {
+        background-color: $color-white;
+    }
+
+    &--back {
+        transform: rotateY(180deg);
+
+        &-1{
+            background-image: linear-gradient(to right bottom,
+            $color-secondary-ligth,
+            $color-secondary-dark);
+        }
+
+        &-2{
+            background-image: linear-gradient(to right bottom,
+            $color-primary-ligth,
+            $color-primary-dark);
+        }
+        &-3{
+            background-image: linear-gradient(to right bottom,
+            $color-tertiary-ligth,
+            $color-tertiary-dark);
+        }
+    }
+ }
+ 
+    &:hover &__side--front {
+        transform: rotateY(180deg);
+    }
+
+    &:hover &__side--back {
+        transform: rotateY(360deg);
+        
+    }
+
+    //fRONT-SZIE STYLING
+    .card__picture {
+        background-size: cover;
+        clip-path: polygon(0 0, 100% 0, 100% 90%, 50% 90% , 0 100%);
+
+        &--1{
+            background-image: url( ../img/nat-5.jpg);
+            height: 20rem;
+            
+        }
+        
+        &--2{
+            background-image: url( ../img/nat-5.jpg);
+            
+        }
+        
+        &--3{
+            background-image: url( ../img/nat-5.jpg);
+
+        }
+    }
+}

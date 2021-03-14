@@ -98,6 +98,12 @@ body {
 .mb-small {
   margin-bottom: 1.5rem; }
 
+.mt-small {
+  margin-top: 1.5rem; }
+
+.mt-big {
+  margin-top: 8rem; }
+
 .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -135,6 +141,12 @@ body {
   color: #777; }
   .btn--white::after {
     background-color: #FFF; }
+
+.btn--primary {
+  background-color: #008cff;
+  color: #FFF; }
+  .btn--primary::after {
+    background-color: #008cff; }
 
 .btn--animated {
   animation: moveInBottom 1s ease-out .75s;
@@ -361,5 +373,5 @@ body {
 
 .section-tours {
   background-color: #f7f7f7;
-  padding: 25rem 0 50rem 0;
+  padding: 25rem 0 30rem 0;
   margin-top: -10rem; }

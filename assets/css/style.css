@@ -211,7 +211,7 @@ body {
   height: 50rem; }
   .card__side {
     height: 50rem;
-    transition: all 1.5s ease;
+    transition: all 1.3s ease;
     position: absolute;
     top: 0;
     left: 0;
@@ -262,7 +262,23 @@ body {
     padding: 1rem 1.5rem;
     -webkit-box-decoration-break: clone; }
     .card__heading-span--1 {
-      background-image: linear-gradient(to right bottom, #ffb900, #ff7730), url(../img/nat-5.jpg); }
+      background-image: linear-gradient(to right bottom, rgba(255, 185, 0, 0.8), rgba(255, 119, 48, 0.8)), url(../img/nat-5.jpg); }
+    .card__heading-span--2 {
+      background-image: linear-gradient(to right bottom, rgba(0, 247, 255, 0.7), rgba(86, 67, 250, 0.7)), url(../img/nat-5.jpg); }
+    .card__heading-span--3 {
+      background-image: linear-gradient(to right bottom, rgba(23, 235, 79, 0.7), rgba(6, 94, 29, 0.7)), url(../img/nat-5.jpg); }
+  .card__datails {
+    padding: 3rem; }
+    .card__datails ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.5rem; }
+      .card__datails ul li {
+        padding: 1rem; }
+        .card__datails ul li:not(:last-child) {
+          border-bottom: 1px solid #eee; }
 
 .header {
   height: 95vh;

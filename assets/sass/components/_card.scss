@@ -8,7 +8,7 @@
 
  &__side{
     height: 50rem;
-    transition: all 1.5s ease;
+    transition: all 1.3s ease;
     position: absolute;
     top: 0;
     left: 0;
@@ -50,7 +50,6 @@
 
     &:hover &__side--back {
         transform: rotateY(360deg);
-        
     }
 
     //fRONT-SZIE STYLING
@@ -107,8 +106,39 @@
         &--1 {
             background-image: linear-gradient(
                 to right bottom,
-                rgba($color-secondary-ligth, 1),
-                rgba($color-secondary-dark, 1)) ,url( ../img/nat-5.jpg);
+                rgba($color-secondary-ligth, 0.8),
+                rgba($color-secondary-dark, 0.8)) ,url( ../img/nat-5.jpg);
+        }
+
+        &--2 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-primary-ligth, .7),
+                rgba($color-primary-dark, .7)) ,url( ../img/nat-5.jpg);
+        }
+
+        &--3 {
+            background-image: linear-gradient(
+                to right bottom,
+                rgba($color-tertiary-ligth, .7),
+                rgba($color-tertiary-dark, .7)) ,url( ../img/nat-5.jpg);
+        }
+    }
+
+    &__datails {
+        padding: 3rem;
+        ul{
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 1.5rem;
+            li{
+                padding: 1rem;
+                &:not(:last-child) {
+                    border-bottom: 1px solid #eee;
+                }
+            }
         }
     }
 }

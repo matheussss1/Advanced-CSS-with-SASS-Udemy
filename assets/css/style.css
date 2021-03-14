@@ -279,6 +279,24 @@ body {
         padding: 1rem; }
         .card__datails ul li:not(:last-child) {
           border-bottom: 1px solid #eee; }
+  .card__cta {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); }
+  .card__price-box {
+    text-transform: uppercase;
+    color: #FFF;
+    margin-bottom: 8rem; }
+  .card__price-only {
+    font-size: 1.5rem;
+    letter-spacing: .5rem;
+    margin-bottom: 8rem; }
+  .card__price-value {
+    font-size: 6rem;
+    font-weight: 100;
+    letter-spacing: 0.3rem; }
 
 .header {
   height: 95vh;

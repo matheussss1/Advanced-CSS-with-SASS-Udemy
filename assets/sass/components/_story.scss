@@ -1,6 +1,7 @@
 .story {
     width: 75%;
     margin: 0 auto;
+    background-color: rgba($color-grey-ligth-1, .5);
     box-shadow: 0 3rem 6rem rgba($color-black, .3);
     border-radius: 3px;
     padding: 6rem;
@@ -32,6 +33,7 @@
         transform: translateX(-4rem) scale(1.4);
         backface-visibility: hidden;
         overflow: hidden;
+        transition: all .5s;
     }
 
     &__caption {
@@ -44,6 +46,8 @@
         font-size: 1.7rem;
         text-align: center;
         opacity: 0;
+        transition: all .7s;
+
     }
 
     &:hover &__caption {

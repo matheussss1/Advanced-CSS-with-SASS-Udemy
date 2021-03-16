@@ -95,11 +95,17 @@ body {
 .mb-big {
   margin-bottom: 8rem; }
 
+.mb-medium {
+  margin-bottom: 4rem; }
+
 .mb-small {
   margin-bottom: 1.5rem; }
 
 .mt-small {
   margin-top: 1.5rem; }
+
+.mt-medium {
+  margin-top: 4rem; }
 
 .mt-big {
   margin-top: 8rem; }
@@ -375,6 +381,43 @@ body {
     height: 100%;
     object-fit: cover; }
 
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__input {
+  font-family: inherit;
+  color: inherit;
+  font-size: 1.5rem;
+  padding: 1.5rem 2rem;
+  border-radius: 2px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  border-bottom: 3px solid transparent;
+  width: 90%;
+  display: block; }
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
+    border-bottom: 3px solid #008cff; }
+    .form__input:focus:invalid {
+      border-bottom: 3px solid #ff7730; }
+  .form__input::placeholder {
+    color: #999; }
+
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-left: 2rem;
+  margin-top: .7rem;
+  display: block;
+  transform: translateY(0);
+  transition: all .3s; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(0, 140, 255, 0.7), rgba(0, 247, 255, 0.7)), url("../img/hero.jpg");
@@ -444,3 +487,17 @@ body {
 .section-stories {
   position: relative;
   padding: 15rem 0; }
+
+.section-book {
+  padding: 15rem 0;
+  background-image: linear-gradient(to right bottom, #00f7ff, #5643fa); }
+
+.book {
+  background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url(../img/nat-10.jpg);
+  background-size: 100%;
+  border-radius: 3px;
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.7);
+  height: 50rem; }
+  .book__form {
+    width: 50%;
+    padding: 6rem; }

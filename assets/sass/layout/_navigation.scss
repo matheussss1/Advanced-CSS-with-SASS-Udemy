@@ -1,0 +1,143 @@
+.navigation {
+
+    &__checkbox {
+        display: none;
+    }
+
+    &__button {
+        background-color: $color-white;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        border-radius: 50%;
+        top: 6rem;
+        right: 6rem;
+        z-index: 2000;
+        cursor: pointer;
+        box-shadow: 0 1rem 3rem rgba($color-black, .6);
+        text-align: center;
+    }
+
+    &__background {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        background-image: radial-gradient($color-primary-ligth, $color-primary-dark);
+        z-index: 1000;
+        transition: transform .8s cubic-bezier(0.83, 0, 0.17, 1);
+    }
+
+    &__nav {
+        height: 100vh;
+        width: 0;
+        position: fixed;
+        z-index: 1500;
+        top: 0;
+        left: -20rem;
+        opacity: 0;
+        transition: all .9s cubic-bezier(0.83, 0, 0.17, 1);
+    }
+
+    &__list {
+        list-style: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+    }
+
+    &__item {
+        margin: 1.5rem;
+    }
+
+    &__link {
+        &:link,
+        &:visited{
+            display: inline-block;
+            text-decoration: none;
+            font-size: 3rem;
+            padding: 1rem 2rem;
+            font-weight: 300;
+            color: white;
+            text-transform: uppercase;
+            background-size: 230%;
+            background-image: linear-gradient(120deg,
+                            transparent 0%,
+                            transparent 50%,
+                              $color-white 50%);
+            transition: all .4s;
+
+            span {
+                margin-right: 1.5rem;
+                display: inline-block;
+            }
+        }
+        &:hover,
+        &:active {
+            background-position: 100%;
+            color: $color-primary;
+            transform: translateX(1rem);
+        }          
+    }
+
+    &__checkbox:checked ~ &__background {
+        transform: scale(100);
+        transition: all .8s cubic-bezier(0.83, 0, 0.17, 1);
+    }
+
+    &__checkbox:checked ~ &__nav {
+        left: 0;
+        opacity: 1;
+        width: 100%;
+        transition: all .8s cubic-bezier(0.83, 0, 0.17, 1);
+    }
+
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: black;
+            display: inline-block;     
+        }
+
+       &::before,
+       &::after {
+           content: '';
+           position: absolute;
+           left: 0;
+           transition: all .3s;
+       }
+
+        &::before {top: -.8rem;}
+        &::after {top: .8rem;}
+    }
+
+    &__button:hover &__icon::before {
+        top: -1rem;
+    }
+    &__button:hover &__icon::after {
+        top: 1rem;
+    }
+
+    &__checkbox:checked + &__button &__icon {
+        background-color: transparent;
+
+        &::before{
+            transform: rotate(135deg);
+            top: 0;
+        }
+        &::after {
+            transform: rotate(-135deg);
+            top: 0;
+        }
+    }
+}

@@ -53,8 +53,9 @@
     &__copyrigth {
         border-top: 1px solid $color-white;
         padding-top: 2rem;
-        display: inline-block;
         font-size: 1.6rem;
         color: $color-white;
+        float: right;
+        display: inline-block;
     }
 }

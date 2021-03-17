@@ -110,7 +110,7 @@ body {
 .mt-big {
   margin-top: 8rem; }
 
-.btn:link, .btn:visited {
+.btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
@@ -118,7 +118,10 @@ body {
   border-radius: 10rem;
   transition: all .2s;
   position: relative;
-  font-size: 1.6rem; }
+  font-size: 1.6rem;
+  border: none;
+  cursor: pointer;
+  outline: none; }
 
 .btn:hover {
   transform: translateY(-0.3rem);
@@ -418,6 +421,43 @@ body {
   visibility: hidden;
   transform: translateY(-4rem); }
 
+.form__radio-group {
+  width: 49%;
+  display: inline-block; }
+
+.form__radio-label {
+  font-size: 1.6rem;
+  position: relative;
+  cursor: pointer;
+  padding-left: 4rem; }
+
+.form__radio-button {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 100%;
+  border: 5px solid #008cff;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -.5rem; }
+  .form__radio-button::after {
+    content: '';
+    height: 1.7rem;
+    width: 1.7rem;
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    border: 1px solid white;
+    background-color: #008cff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: all .4s; }
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1; }
+
 .header {
   height: 95vh;
   background-image: linear-gradient(to right bottom, rgba(0, 140, 255, 0.7), rgba(0, 247, 255, 0.7)), url("../img/hero.jpg");
@@ -464,6 +504,43 @@ body {
     width: calc(2 *((100% - 3 * 6rem) /4) + 6rem); }
   .row .col-3-4 {
     width: calc(3 * ((100% - 3 * 6rem) /4) + (6rem * 2)); }
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10rem 0; }
+  .footer__logo-box {
+    text-align: center;
+    margin-bottom: 8rem; }
+  .footer__logo {
+    width: 15rem;
+    height: auto; }
+  .footer__navigation {
+    border-top: 1px solid #FFF;
+    padding-top: 2rem;
+    display: inline-block; }
+  .footer__list {
+    list-style: none; }
+  .footer__item {
+    display: inline-block; }
+    .footer__item:not(:last-child) {
+      margin-right: 1.5rem; }
+  .footer__link:link, .footer__link:visited {
+    color: #FFF;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    transition: all .1s;
+    display: inline-block; }
+  .footer__link:hover, .footer__link:active {
+    color: #008cff;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+    transform: translateY(-5px) scale(1.1); }
+  .footer__copyrigth {
+    border-top: 1px solid #FFF;
+    padding-top: 2rem;
+    display: inline-block;
+    font-size: 1.6rem;
+    color: #FFF; }
 
 .section-about {
   background-color: #f7f7f7;

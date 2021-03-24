@@ -6,3 +6,25 @@
         clear: both;
     }
 }
+
+/*  @ $breakpoint -> String;
+    Argument choices:
+    0 - 600px:          phone
+    600px - 900px:      tablet-v (vertical)
+    1200px - 1800px:    tablet-h (horizontal)
+    1800px - infinte:   big-dektop 
+*/
+@mixin responsive($breakpoint){
+    @if $breakpoint == phone {
+        @media (max-width: 600px) {@content};
+    }
+    @if $breakpoint == tablet-v {
+        @media (max-width: 900px) {@content};
+    }
+    @if $breakpoint == tablet-h {
+        @media (max-width: 1200px) {@content};
+    }
+    @if $breakpoint == big-desktop {
+        @media (min-width: 1800px) {@content};
+    }
+}

@@ -8,6 +8,19 @@
 html {
     //Define 1rem = 10px;
     font-size: 62.5%;
+    
+    @include responsive(phone){
+        
+    }
+    @include responsive(tablet-v){
+
+    }
+    @include responsive(tablet-h){
+
+    }
+    @include responsive(big-dektop){
+
+    }
 }
 body {
     box-sizing: border-box;

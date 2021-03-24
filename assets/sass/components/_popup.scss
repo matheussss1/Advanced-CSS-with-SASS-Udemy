@@ -1,0 +1,69 @@
+.popup{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($color-black, .8);
+    z-index: 999999;   
+    transition: all .2s;
+    opacity: 0;
+    visibility: hidden;
+
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content{
+        transform: translate(-50%, -50%) scale(1);
+    }
+
+    &__content{
+        border-radius: 5px;
+        width: 75%;
+        background-color: $color-white;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%) scale(0);
+        display: table;
+        transition: all .5s;
+    }
+    &__left{
+        width: 33.3333%;
+        display: table-cell;
+    }
+    &__right{
+        width: 66.6667%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 2rem 5rem;
+    }
+
+    &__img{
+        display: block;
+        width: 100%;
+    }
+    
+    &__close,
+    &__close:link,
+    &__close:visited{
+        position: absolute;
+        top: 2.5rem;
+        right: 2.5rem;
+        font-size: 2.5rem;
+        text-decoration: none;
+        color: $color-black;
+
+        &:hover{
+            color: $color-primary;
+        }
+    }
+
+    &__text{
+        column-count: 2;
+        column-gap: 3rem;
+        column-rule: 1px solid rgba($color-black, .4);
+    }
+}

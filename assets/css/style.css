@@ -1,3 +1,10 @@
+/*  @ $breakpoint -> String;
+    Argument choices:
+    0 - 600px:          phone
+    600px - 900px:      tablet-v (vertical)
+    1200px - 1800px:    tablet-h (horizontal)
+    1800px - infinte:   big-dektop 
+*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @keyframes moveInLeft {
   0% {
@@ -36,6 +43,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 60rem) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 90rem) {
+    html {
+      font-size: 60%; } }
+  @media (max-width: 120rem) {
+    html {
+      font-size: 70%; } }
 
 body {
   box-sizing: border-box; }

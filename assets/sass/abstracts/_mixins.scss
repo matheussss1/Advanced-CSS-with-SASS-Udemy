@@ -16,15 +16,15 @@
 */
 @mixin responsive($breakpoint){
     @if $breakpoint == phone {
-        @media (max-width: 600px) {@content};
+        @media (max-width: 60rem) {@content};
     }
     @if $breakpoint == tablet-v {
-        @media (max-width: 900px) {@content};
+        @media (max-width: 90rem) {@content};
     }
     @if $breakpoint == tablet-h {
-        @media (max-width: 1200px) {@content};
+        @media (max-width: 120rem) {@content};
     }
     @if $breakpoint == big-desktop {
-        @media (min-width: 1800px) {@content};
+        @media (min-width: 180rem) {@content};
     }
 }

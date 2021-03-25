@@ -4,6 +4,10 @@
     600px - 900px:      tablet-v (vertical)
     1200px - 1800px:    tablet-h (horizontal)
     1800px - infinte:   big-dektop 
+
+    1em = 16px
+
+    ORDER: BASE + TYPOGRAPHY > General layout + grip > page layout > components
 */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @keyframes moveInLeft {
@@ -43,25 +47,29 @@
 
 html {
   font-size: 62.5%; }
-  @media (max-width: 60rem) {
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media (max-width: 90rem) {
+  @media (min-width: 112.5em) {
     html {
-      font-size: 60%; } }
-  @media (max-width: 120rem) {
-    html {
-      font-size: 70%; } }
+      font-size: 75%; } }
 
 body {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  padding: 3rem;
+  width: 100%; }
+  @media (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 body {
   font-family: 'Roboto';
   font-weight: 400;
   line-height: 1.7;
-  color: #777;
-  padding: 3rem; }
+  color: #777; }
 
 .heading-primary {
   color: #FFF;
@@ -74,15 +82,23 @@ body {
     font-weight: 400;
     letter-spacing: 4.5rem;
     animation: moveInLeft 2s ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-size: 5rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 2rem;
     font-weight: 500;
     letter-spacing: 1.95rem;
     animation: moveInRight 2s ease-out; }
+    @media (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: .5rem;
+        font-size: 1.2rem; } }
 
 .heading-secondary {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   font-weight: 700;
   display: inline-block;
@@ -91,6 +107,9 @@ body {
   color: transparent;
   letter-spacing: .2rem;
   transition: all .5s; }
+  @media (max-width: 37.5em) {
+    .heading-secondary {
+      font-size: 1.6rem; } }
   .heading-secondary:hover {
     transform: skewY(-5deg) skewX(-7deg) scale(1.1);
     text-shadow: 0.5rem 1rem 1rem rgba(0, 0, 0, 0.5); }
@@ -533,12 +552,19 @@ body {
   position: relative;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%); }
+  @media (max-width: 37.5em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); } }
   .header__logo-box {
     position: absolute;
     top: 4rem;
     left: 4rem; }
   .header__logo {
     height: 6.5rem; }
+    @media (max-width: 37.5em) {
+      .header__logo {
+        height: 4rem; } }
   .header__text-box {
     position: absolute;
     top: 40%;
@@ -549,8 +575,15 @@ body {
 .row {
   max-width: 114rem;
   margin: 0 auto; }
+  @media (max-width: 75em) {
+    .row {
+      max-width: 50rem;
+      padding: 0 3rem; } }
   .row:not(:last-child) {
     margin-bottom: 6rem; }
+    @media (max-width: 75em) {
+      .row:not(:last-child) {
+        margin-bottom: 4rem; } }
   .row::after {
     content: '';
     display: table;
@@ -559,6 +592,12 @@ body {
     float: left; }
     .row [class^="col-"]:not(:last-child) {
       margin-right: 6rem; }
+    @media (max-width: 75em) {
+      .row [class^="col-"] {
+        width: 100% !important;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 4rem; } }
   .row .col-1-2 {
     width: calc((100% - 6rem) / 2); }
   .row .col-1-3 {
@@ -575,9 +614,15 @@ body {
 .footer {
   background-color: rgba(0, 0, 0, 0.8);
   padding: 10rem 0; }
+  @media (max-width: 75em) {
+    .footer {
+      padding: 5rem 0; } }
   .footer__logo-box {
     text-align: center;
     margin-bottom: 8rem; }
+    @media (max-width: 75em) {
+      .footer__logo-box {
+        margin-bottom: 5rem; } }
   .footer__logo {
     width: 15rem;
     height: auto; }
@@ -585,6 +630,11 @@ body {
     border-top: 1px solid #FFF;
     padding-top: 2rem;
     display: inline-block; }
+    @media (max-width: 75em) {
+      .footer__navigation {
+        width: 100%;
+        text-align: center;
+        float: none; } }
   .footer__list {
     list-style: none; }
   .footer__item {
@@ -598,6 +648,9 @@ body {
     font-size: 1.6rem;
     transition: all .1s;
     display: inline-block; }
+    @media (max-width: 37.5em) {
+      .footer__link:link, .footer__link:visited {
+        font-size: 1.4rem; } }
   .footer__link:hover, .footer__link:active {
     color: #008cff;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
@@ -609,6 +662,14 @@ body {
     color: #FFF;
     float: right;
     display: inline-block; }
+    @media (max-width: 75em) {
+      .footer__copyrigth {
+        width: 100%;
+        float: none;
+        text-align: center; } }
+    @media (max-width: 37.5em) {
+      .footer__copyrigth {
+        font-size: 1rem; } }
 
 .navigation__checkbox {
   display: none; }
@@ -625,6 +686,12 @@ body {
   cursor: pointer;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.6);
   text-align: center; }
+  @media (max-width: 56.25em) {
+    .navigation__button {
+      top: 4rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__button {
+      top: 3rem; } }
 
 .navigation__background {
   height: 6rem;
@@ -636,6 +703,12 @@ body {
   background-image: radial-gradient(#00f7ff, #5643fa);
   z-index: 1000;
   transition: transform 0.8s cubic-bezier(0.83, 0, 0.17, 1); }
+  @media (max-width: 56.25em) {
+    .navigation__background {
+      top: 4rem; } }
+  @media (max-width: 37.5em) {
+    .navigation__background {
+      top: 3rem; } }
 
 .navigation__nav {
   height: 100vh;
@@ -645,6 +718,7 @@ body {
   top: 0;
   left: -20rem;
   opacity: 0;
+  overflow-x: hidden;
   transition: all 0.9s cubic-bezier(0.83, 0, 0.17, 1); }
 
 .navigation__list {
@@ -669,9 +743,15 @@ body {
   background-size: 230%;
   background-image: linear-gradient(120deg, transparent 0%, transparent 50%, #FFF 50%);
   transition: all .4s; }
+  @media (max-width: 37.5em) {
+    .navigation__link:link, .navigation__link:visited {
+      font-size: 2rem; } }
   .navigation__link:link span, .navigation__link:visited span {
     margin-right: 1.5rem;
     display: inline-block; }
+    @media (max-width: 37.5em) {
+      .navigation__link:link span, .navigation__link:visited span {
+        margin-right: .5rem; } }
 
 .navigation__link:hover, .navigation__link:active {
   background-position: 100%;

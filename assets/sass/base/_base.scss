@@ -6,23 +6,29 @@
     box-sizing: inherit;
 }
 html {
+
     //Define 1rem = 10px;
     font-size: 62.5%;
     
-    @include responsive(phone){
+    @include responsive(tablet-h){
+        font-size: 56.25%;
+    }
+    
+    @include responsive(tablet-v){
         font-size: 50%;
     }
-    @include responsive(tablet-v){
-        font-size: 60%;
-    }
-    @include responsive(tablet-h){
-        font-size: 70%;
-    }
-    @include responsive(big-dektop){
-        font-size: 80%;
+    
+    @include responsive(big-desktop){
+        font-size: 75%;
     }
     
 }
 body {
     box-sizing: border-box;
+    padding:3rem;
+    width: 100%;
+
+    @include responsive(tablet-v) {
+        padding: 0;
+    }
 }

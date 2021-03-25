@@ -2,8 +2,17 @@
     max-width: $grid-width;
     margin: 0 auto;
     
+    @include responsive(tablet-h) {
+        max-width: 50rem;
+        padding: 0 3rem;
+    }
+    
     &:not(:last-child) {
         margin-bottom: $space-vertical;
+
+        @include responsive(tablet-h) {
+            margin-bottom: $space-vertical-small;
+        }
     }
 
     @include clearfix;
@@ -12,6 +21,13 @@
         float: left;
         &:not(:last-child) {
             margin-right: $space-horizontal;
+        }
+
+        @include responsive(tablet-h) {
+            width: 100%!important;
+            float: none;
+            margin-right: 0;
+            margin-bottom: $space-vertical-small
         }
     }
     

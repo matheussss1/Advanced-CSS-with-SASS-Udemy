@@ -1,5 +1,5 @@
 .navigation {
-
+  
     &__checkbox {
         display: none;
     }
@@ -16,6 +16,13 @@
         cursor: pointer;
         box-shadow: 0 1rem 3rem rgba($color-black, .6);
         text-align: center;
+
+        @include responsive (tablet-v) {
+            top: 4rem;
+        }
+        @include responsive (phone) {
+            top: 3rem;
+        }
     }
 
     &__background {
@@ -28,6 +35,12 @@
         background-image: radial-gradient($color-primary-ligth, $color-primary-dark);
         z-index: 1000;
         transition: transform .8s cubic-bezier(0.83, 0, 0.17, 1);
+        @include responsive (tablet-v) {
+            top: 4rem;
+        }
+        @include responsive (phone) {
+            top: 3rem;
+        }
     }
 
     &__nav {
@@ -38,6 +51,7 @@
         top: 0;
         left: -20rem;
         opacity: 0;
+        overflow-x: hidden;
         transition: all .9s cubic-bezier(0.83, 0, 0.17, 1);
     }
 
@@ -71,9 +85,16 @@
                               $color-white 50%);
             transition: all .4s;
 
+            @include responsive (phone) {
+                font-size: 2rem;
+            }
             span {
                 margin-right: 1.5rem;
                 display: inline-block;
+
+                @include responsive (phone) {
+                    margin-right: .5rem;
+                }
             }
         }
         &:hover,

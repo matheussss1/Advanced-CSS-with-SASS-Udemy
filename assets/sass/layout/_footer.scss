@@ -2,9 +2,17 @@
     background-color: rgba($color-black, .8);
     padding: 10rem 0;
 
+    @include responsive (tablet-h) {
+        padding: 5rem 0;
+    }
+
     &__logo-box {
         text-align: center;
         margin-bottom: 8rem;
+        
+        @include responsive (tablet-h) {
+            margin-bottom: 5rem;
+        }
     }
 
     &__logo {
@@ -16,6 +24,13 @@
         border-top: 1px solid $color-white;
         padding-top: 2rem;
         display: inline-block;
+
+        @include responsive (tablet-h) {
+            width: 100%;
+            text-align: center;
+            float: none;
+        }
+        
     }
 
     &__list {
@@ -40,6 +55,9 @@
             font-size: 1.6rem;
             transition: all .1s;
             display: inline-block;
+            @include responsive (phone) {
+                font-size: 1.4rem;
+            }
         }
 
         &:hover,
@@ -57,5 +75,14 @@
         color: $color-white;
         float: right;
         display: inline-block;
+
+        @include responsive (tablet-h) {
+            width: 100%;
+            float: none;
+            text-align: center;
+        }
+        @include responsive (phone) {
+            font-size: 1rem;
+        }
     }
 }

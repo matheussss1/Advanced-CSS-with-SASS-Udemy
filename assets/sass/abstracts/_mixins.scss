@@ -13,18 +13,22 @@
     600px - 900px:      tablet-v (vertical)
     1200px - 1800px:    tablet-h (horizontal)
     1800px - infinte:   big-dektop 
+
+    1em = 16px
+
+    ORDER: BASE + TYPOGRAPHY > General layout + grip > page layout > components
 */
 @mixin responsive($breakpoint){
     @if $breakpoint == phone {
-        @media (max-width: 60rem) {@content};
+        @media (max-width: 37.5em) {@content}; //600px
     }
     @if $breakpoint == tablet-v {
-        @media (max-width: 90rem) {@content};
+        @media (max-width: 56.25em) {@content}; //900px
     }
     @if $breakpoint == tablet-h {
-        @media (max-width: 120rem) {@content};
+        @media (max-width: 75em) {@content}; // 1200px
     }
     @if $breakpoint == big-desktop {
-        @media (min-width: 180rem) {@content};
+        @media (min-width: 112.5em) {@content}; //1800px
     }
 }

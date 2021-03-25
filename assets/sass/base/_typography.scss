@@ -37,7 +37,7 @@ body {
         
         @include responsive(phone) {
             letter-spacing: .5rem;
-            font-size: 1.2rem;
+            font-size: 1.7rem;
         }
     }
 }
@@ -54,7 +54,7 @@ body {
     transition: all .5s;
 
     @include responsive(phone) {
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 
     &:hover {

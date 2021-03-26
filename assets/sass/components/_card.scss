@@ -18,13 +18,6 @@
     box-shadow: 0 1rem 1rem rgba($color: $color-black, $alpha: 0.2);
     font-size: 12px;
 
-    @include responsive (tablet-h) {
-        width: 85% !important;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    }
-
     &--front {
         background-color: $color-white;
 
@@ -32,10 +25,6 @@
 
     &--back {
         transform: rotateY(180deg);
-
-        @include responsive (tablet-h) {
-            transform: translate(-50%, -50%) rotateY(180deg);
-        }
 
         &-1{
             background-image: linear-gradient(to right bottom,
@@ -59,17 +48,10 @@
     &:hover &__side--front {
         transform: rotateY(180deg);
 
-        @include responsive (tablet-h) {
-            transform: translate(-50%, -50%) rotateY(180deg);
-        }
     }
 
     &:hover &__side--back {
         transform: rotateY(360deg);
-
-        @include responsive (tablet-h) {
-            transform: translate(-50%, -50%) rotateY(360deg);
-        }
     }
 
     //FRONT-SIZE STYLING
@@ -190,5 +172,79 @@
         font-weight: 100;
         letter-spacing: 0.3rem;
         
+    }
+
+
+
+    @include responsive (tablet-h){
+        border-radius: 1rem;
+        height: auto;
+        background-color: $color-white;
+        box-shadow: 0 1rem 1rem rgba($color: $color-black, $alpha: 0.2);
+
+
+        &__side{
+            height: auto;
+            position: relative;
+            box-shadow: none;
+
+            &--back {
+                transform: rotateY(0deg);
+                border-top-left-radius: 0;
+                border-top-right-radius: 0;
+                clip-path: polygon(0 10%,  0 100%, 100% 100%, 100% 0);
+
+                &-1{
+                    background-image: linear-gradient(to right bottom,
+                    $color-secondary-ligth,
+                    $color-secondary-dark);
+                }
+        
+                &-2{
+                    background-image: linear-gradient(to right bottom,
+                    $color-primary-ligth,
+                    $color-primary-dark);
+                }
+                &-3{
+                    background-image: linear-gradient(to right bottom,
+                    $color-tertiary-ligth,
+                    $color-tertiary-dark);
+                }
+            }
+         }
+         
+            &:hover &__side--front {
+                transform: rotateY(0deg);
+        
+            }
+        
+            &:hover &__side--back {
+                transform: rotateY(0deg);
+            }
+            &__cta{
+                text-align: center;
+                position: relative;
+                left: 0%;
+                top: 0%;
+                width: 100%;
+                transform: translate(0);
+                padding: 2rem;
+            }
+        
+            &__price-box{
+                text-transform: uppercase;
+                color: $color-white;
+                margin-bottom: 0rem;
+            }
+        
+            &__price-only{
+                font-size: 1.5rem;
+                letter-spacing: .5rem;
+                margin-bottom: 1rem;
+            }
+            
+            &__price-value{
+                font-size: 5rem;
+            }
     }
 }

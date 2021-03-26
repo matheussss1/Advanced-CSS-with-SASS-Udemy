@@ -282,19 +282,10 @@ body {
     border-radius: 1rem;
     box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2);
     font-size: 12px; }
-    @media (max-width: 75em) {
-      .card__side {
-        width: 85% !important;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%); } }
     .card__side--front {
       background-color: #FFF; }
     .card__side--back {
       transform: rotateY(180deg); }
-      @media (max-width: 75em) {
-        .card__side--back {
-          transform: translate(-50%, -50%) rotateY(180deg); } }
       .card__side--back-1 {
         background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
       .card__side--back-2 {
@@ -303,14 +294,8 @@ body {
         background-image: linear-gradient(to right bottom, #17eb4f, #065e1d); }
   .card:hover .card__side--front {
     transform: rotateY(180deg); }
-    @media (max-width: 75em) {
-      .card:hover .card__side--front {
-        transform: translate(-50%, -50%) rotateY(180deg); } }
   .card:hover .card__side--back {
     transform: rotateY(360deg); }
-    @media (max-width: 75em) {
-      .card:hover .card__side--back {
-        transform: translate(-50%, -50%) rotateY(360deg); } }
   .card__picture {
     background-size: cover;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 80%, 70% 90%, 20% 100%, 0 100%);
@@ -374,6 +359,49 @@ body {
     font-size: 6rem;
     font-weight: 100;
     letter-spacing: 0.3rem; }
+  @media (max-width: 75em) {
+    .card {
+      border-radius: 1rem;
+      height: auto;
+      background-color: #FFF;
+      box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.2); }
+      .card__side {
+        height: auto;
+        position: relative;
+        box-shadow: none; }
+        .card__side--back {
+          transform: rotateY(0deg);
+          border-top-left-radius: 0;
+          border-top-right-radius: 0;
+          clip-path: polygon(0 10%, 0 100%, 100% 100%, 100% 0); }
+          .card__side--back-1 {
+            background-image: linear-gradient(to right bottom, #ffb900, #ff7730); }
+          .card__side--back-2 {
+            background-image: linear-gradient(to right bottom, #00f7ff, #5643fa); }
+          .card__side--back-3 {
+            background-image: linear-gradient(to right bottom, #17eb4f, #065e1d); }
+      .card:hover .card__side--front {
+        transform: rotateY(0deg); }
+      .card:hover .card__side--back {
+        transform: rotateY(0deg); }
+      .card__cta {
+        text-align: center;
+        position: relative;
+        left: 0%;
+        top: 0%;
+        width: 100%;
+        transform: translate(0);
+        padding: 2rem; }
+      .card__price-box {
+        text-transform: uppercase;
+        color: #FFF;
+        margin-bottom: 0rem; }
+      .card__price-only {
+        font-size: 1.5rem;
+        letter-spacing: .5rem;
+        margin-bottom: 1rem; }
+      .card__price-value {
+        font-size: 5rem; } }
 
 .story {
   width: 75%;

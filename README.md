@@ -5,5 +5,5 @@
 
 # Para desenvolver:
 
-## de um git clone na url do repositório, dentro da pasta rode um ## npm ## run ## compile:sass , assim todo código alterado em arquivos sass será compilado pro arquivo CSS.
-### *Obs: Não esquecer que todo arquivo novo em SCSS deve ser importado dentro do ## arquivo main.scss 
+## de um git clone na url do repositório, dentro da pasta rode um ' npm run compile:sass ' , assim todo código alterado em arquivos sass será compilado pro arquivo CSS.
+### *Obs: Não esquecer que todo arquivo novo em SCSS deve ser importado dentro do arquivo ' main.scss '

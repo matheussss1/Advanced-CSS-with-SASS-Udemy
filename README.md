@@ -1,4 +1,4 @@
-# Advanced CSS with SASS
+# Natours Project
 
 ## Project overview
 ![Alt Text](https://github.com/matheussss1/Advanced-CSS-with-SASS-Udemy/blob/master/assets/img/gifReadme/Animated%20GIF-source.gif)

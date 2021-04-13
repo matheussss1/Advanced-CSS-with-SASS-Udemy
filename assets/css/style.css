@@ -414,8 +414,19 @@ body {
   font-size: 1.6rem;
   transform: skewX(-12deg);
   transition: all .5s; }
+  @media (max-width: 75em) {
+    .story {
+      width: 100%;
+      padding: 4rem;
+      padding-left: 7rem; } }
+  @media (max-width: 37.5em) {
+    .story {
+      transform: skew(0); } }
   .story > * {
     transform: skewX(12deg); }
+    @media (max-width: 37.5em) {
+      .story > * {
+        transform: skew(0); } }
   .story__shape {
     width: 15rem;
     height: 15rem;
@@ -428,6 +439,9 @@ body {
     position: relative;
     overflow: hidden;
     transition: all .8s; }
+    @media (max-width: 37.5em) {
+      .story__shape {
+        transform: skew(0); } }
   .story__img {
     height: 100%;
     transform: translateX(-4rem) scale(1.4);
@@ -482,6 +496,9 @@ body {
   border-bottom: 3px solid transparent;
   width: 90%;
   display: block; }
+  @media (max-width: 75em) {
+    .form__input {
+      width: 100% !important; } }
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
@@ -508,6 +525,10 @@ body {
 .form__radio-group {
   width: 49%;
   display: inline-block; }
+  @media (max-width: 75em) {
+    .form__radio-group {
+      width: 100% !important;
+      margin-bottom: 1rem; } }
 
 .form__radio-label {
   font-size: 1.6rem;
@@ -857,7 +878,9 @@ body {
   @media (max-width: 75em) {
     .section-about {
       padding: 20rem 0;
-      padding-bottom: 45rem; } }
+      padding-bottom: 45rem; }
+      .section-about .heading-secondary {
+        padding-top: 10rem; } }
 
 .section-features {
   padding: 20rem 0;
@@ -897,12 +920,14 @@ body {
   background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url(../img/nat-10.jpg);
   background-size: 100%;
   border-radius: 3px;
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.7);
-  height: 50rem; }
+  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.7); }
+  @media (max-width: 75em) {
+    .book {
+      background-image: linear-gradient(105deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 100%, transparent 70%), url(../img/nat-10.jpg);
+      background-size: cover; } }
   .book__form {
     width: 50%;
     padding: 6rem; }
     @media (max-width: 75em) {
       .book__form {
-        width: 100% !important;
-        padding: 2rem; } }
+        width: 100% !important; } }

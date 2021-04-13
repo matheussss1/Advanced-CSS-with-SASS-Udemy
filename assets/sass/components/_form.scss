@@ -15,7 +15,9 @@
         border-bottom: 3px solid transparent;
         width: 90%;
         display: block;
-
+        @include responsive (tablet-h) {
+            width: 100%!important;
+        }
         &:focus {
             outline: none;
             box-shadow: 0 1rem 2rem rgba($color-black, .3);
@@ -29,8 +31,6 @@
         &::placeholder {
             color: $color-grey-dark-2;
         }
-
-        
     }
 
     &__label {
@@ -52,6 +52,10 @@
     &__radio-group{
         width: 49%;
         display: inline-block;
+        @include responsive (tablet-h) {
+            width: 100%!important;
+            margin-bottom: 1rem;
+        }
     }
 
     &__radio-label {

@@ -10,8 +10,21 @@
     transform: skewX(-12deg);
     transition: all .5s;
 
+    @include responsive (tablet-h){
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+    @include responsive (phone) {
+        transform: skew(0);
+    }
+
     & > * {
         transform: skewX(12deg);
+
+        @include responsive (phone) {
+            transform: skew(0);
+        }
     }
 
     &__shape {
@@ -26,7 +39,9 @@
         position: relative;
         overflow: hidden;
         transition: all .8s;
-
+        @include responsive (phone) {
+            transform: skew(0);
+        }
     }
     &__img {
         height: 100%;
